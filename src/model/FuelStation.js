@@ -4,7 +4,7 @@ let model = null;
 let schemaFuelStation = null;
 
 class FuelStation {
-    constructor({_id, id, name, active, updatedAt, address}) {
+    constructor({ _id, id, name, active, updatedAt, address}) {
         this.id = _id || id || null;
         this.name = name || null;
         this.active = active;
@@ -18,7 +18,7 @@ class FuelStation {
     }
 
     setName(name) {
-        this.neme = name;
+        this.name = name;
         return this;
     }
 

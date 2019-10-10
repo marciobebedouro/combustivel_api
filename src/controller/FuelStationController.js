@@ -7,7 +7,10 @@ class FuelStationController {
     }
 
     async createFuelStation(request) {
-        const fuelStation = new FuelStation(request.body);
+        const {body} = request;
+        console.log(body)
+        const fuelStation = new FuelStation(body);
+        console.log(fuelStation)
         const fuelStationCurrent = await this.fuelStationRepository.save(fuelStation);
 
         return fuelStationCurrent;
