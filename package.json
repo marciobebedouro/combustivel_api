@@ -4,7 +4,9 @@
   "description": "Este projeto é para criação de um api para cadastrar postos de combustivel e preços.\r Abaixo os pacotes necessários para rodar a aplicação",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"node_modules/.bin/nodemon app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
