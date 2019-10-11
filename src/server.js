@@ -5,6 +5,7 @@ const env = require('./config/env')
 
 const BaseRouter = require('./routes/BaseRouter');
 const FuelStationRouter = require('./routes/FuelStationRouter');
+const FuelRouter = require('./routes/FuelRouter');
 
 class Server {
     constructor() {
@@ -13,6 +14,8 @@ class Server {
         this.api.use(cors());
         this.api.use(bodyParser.json());
         this.addAllRouters(FuelStationRouter);
+        this.addAllRouters(FuelRouter);
+
     }
 
     addAllRouters(routerClass) {

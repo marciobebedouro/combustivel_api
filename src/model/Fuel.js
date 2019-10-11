@@ -4,11 +4,12 @@ let model = null;
 let schemaFuel = null;
 
 class Fuel {
-    constructor ({_id, id, price, active, updateAt, fuelStation}) {
+    constructor ({_id, id, price, active, type, updateAt, fuelStation}) {
         this.id = _id || id || null;
         this.price = price || null;
         this.active = active;
         this.updateAt = updateAt || null;
+        this.type = type || null;
         this.fuelStation = fuelStation;
     }
 
@@ -37,6 +38,11 @@ class Fuel {
         return this;
     }
 
+    setType(type) {
+        this.type = type;
+        return this;
+    }
+
     static getModel() {
         if(model === null && schemaFuel === null) {
             const { Schema } = mongoose;
@@ -46,6 +52,7 @@ class Fuel {
                 updateAt: {type: Date},
                 price: {type: Number, required:[true, '{PATH} is required!']},
                 active: {type: Boolean, required:[true, '{PATH} is required!']},
+                type: {type: String, required:[true, '{PATH} is required!']},
                 fuelStation: {type: Schema.Types.ObjectId, required:[true, '{PATH} is required!']}
             });
 
