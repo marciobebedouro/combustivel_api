@@ -8,6 +8,9 @@
     "dev":"node_modules/.bin/nodemon app.js",
     "start": "node app.js"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/melinprofessor/combustivel_api_pmd02.git"
